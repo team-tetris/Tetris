@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const Button = ({ content = 'Sample heading', size = 1 }) => {
+const Heading = ({ content = 'Sample heading', size = 1 }) => {
    const renderHeading = () => {
       switch (size) {
          case 1:
@@ -28,10 +28,6 @@ const Button = ({ content = 'Sample heading', size = 1 }) => {
 
       }
    }
-   return (
-      <>
-         {renderHeading()}
-      </>
-   )
+   return renderHeading()
 }
-export default Button
+export default Heading

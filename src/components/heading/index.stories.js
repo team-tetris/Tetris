@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from './index.js'
+import Heading from './index.js'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 export default { title: 'Heading component', decorators: [withKnobs] }
 export const heading = () => {
@@ -14,5 +14,5 @@ export const heading = () => {
     6: 6
   }
   const size = select('size', sizeVariants)
-  return <Button muted={muted} size={size} content={content} />
+  return <Heading muted={muted} size={size} content={content} />
 }

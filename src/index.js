@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './components/button';
+import renderTetrisComponent from './utils/componentSorter'
 
-const Tetris = ({ theme, size, message, outline }) => {
-    return <Button theme={theme} size={size} message={message} outline={outline} />
+const Tetris = (props) => {
+    return renderTetrisComponent(props);
 }
 
 export default Tetris;
