@@ -2,7 +2,11 @@ import React from 'react'
 import Button from '../components/button'
 import Heading from '../components/heading'
 import Text from '../components/text'
-const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading }) => {
+import Image from '../components/image'
+import Alert from '../components/alert'
+import Badge from '../components/badge'
+import Card from '../components/card'
+const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino }) => {
 
     switch (type) {
         case "button":
@@ -19,6 +23,12 @@ const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rou
             break;
         case "alert":
             return <Alert theme={theme} content={content} heading={heading} close={close} />
+            break;
+        case "badge":
+            return <Badge theme={theme} content={content} rounded={rounded} />
+            break;
+        case "card":
+            return <Card align={align} tetromino={tetromino} />
             break;
         default:
             return <Text size={size} content="No component of this type found" />

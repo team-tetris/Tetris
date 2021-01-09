@@ -1,5 +1,5 @@
 import React from 'react';
-import renderTetrisComponent from './utils/componentSorter'
+import renderTetrisComponent from './utils/tetromino'
 
 const Tetris = (props) => {
     return renderTetrisComponent(props);
