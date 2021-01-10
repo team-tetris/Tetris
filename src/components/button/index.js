@@ -7,7 +7,7 @@ const Button = ({ content = 'Sample button', theme = 'primary', outline = false,
 
 Button.propTypes = {
    content: PropTypes.string,
-   theme: PropTypes.string,
+   theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
    outline: PropTypes.bool,
    size: PropTypes.string,
 }

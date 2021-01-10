@@ -15,7 +15,7 @@ const Alert = ({ content = 'A simple primary alert—check it out!', theme = 'pr
 
 Alert.propTypes = {
    content: PropTypes.string,
-   theme: PropTypes.string,
+   theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
    heading: PropTypes.string,
    close: PropTypes.bool,
 }
