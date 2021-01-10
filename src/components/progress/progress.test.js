@@ -12,7 +12,7 @@ describe('Progress', () => {
     })
 })
 themes.forEach((theme) => {
-    describe('Progress', () => {
+    describe(`Progress - ${theme}`, () => {
         test('should render', () => {
             const wrapper = shallow(
                 <Progress content="25" theme={theme} />
@@ -22,7 +22,7 @@ themes.forEach((theme) => {
         })
     })
 })
-describe('Progress', () => {
+describe('Progress with animation', () => {
     test('should render', () => {
         const wrapper = shallow(
             <Progress content="25" theme="bg-success" striped animated />

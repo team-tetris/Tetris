@@ -11,7 +11,7 @@ describe('Image', () => {
         expect(wrapper.html()).toBe(`<img src="https://dummyimage.com/600x400/000/fff" class="rounded  " height="50" width="50"/>`);
     })
 })
-describe('Image', () => {
+describe('Image rounded', () => {
     test('should render', () => {
         const wrapper = shallow(
             <Image source="https://dummyimage.com/600x400/000/fff" rounded={false} height="50" width="50"/>
