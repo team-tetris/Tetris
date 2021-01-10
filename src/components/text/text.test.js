@@ -1,23 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import { shallow } from 'enzyme'
 
-let rootContainer;
+import Text from './index'
 
-beforeEach(() => {
-    rootContainer = document.createElement("div");
-    document.body.appendChild(rootContainer);
-});
-
-afterEach(() => {
-    document.body.removeChild(rootContainer);
-    rootContainer = null;
-});
-describe("App Component Testing", () => {
-    it("Renders Hello World Title", () => {
-        act(() => {
-            ReactDOM.render(<Text content="hey" />, rootContainer);
-        });
-        const h1 = rootContainer.querySelector("h1");
-        expect(h1.textContent).to.equal("hey");
-    });
-});
+describe('App', () => {
+    test('should render', () => {
+        const wrapper = shallow(
+            <Text content="hey there" />
+        )
+        console.log(wrapper)
+        expect(wrapper.text()).toBe('hey there')
+    })
+})
