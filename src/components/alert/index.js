@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import PropTypes from 'prop-types'
 
 const Alert = ({ content = 'A simple primary alert—check it out!', theme = 'primary', heading, close }) => {
    const [show, toggleShow] = useState(true);
@@ -12,5 +12,13 @@ const Alert = ({ content = 'A simple primary alert—check it out!', theme = 'pr
       {close && <button type="button" className="close" aria-label="Close" onClick={() => toggleShow(false)}><span aria-hidden="true">×</span></button>}
    </div>
 }
+
+Alert.propTypes = {
+   content: PropTypes.string,
+   theme: PropTypes.string,
+   heading: PropTypes.string,
+   close: PropTypes.bool,
+}
+
 export default Alert
 

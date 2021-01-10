@@ -13,25 +13,18 @@ const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rou
     switch (type) {
         case "button":
             return <Button theme={theme} size={size} content={content} outline={outline} />
-            break;
         case "heading":
             return <Heading muted={muted} size={size} content={content} />
-            break;
         case "text":
             return <Text size={size} content={content} />
-            break;
         case "image":
             return <Image rounded={rounded} size={size} source={source} height={height} width={width} />
-            break;
         case "alert":
             return <Alert theme={theme} content={content} heading={heading} close={close} />
-            break;
         case "badge":
             return <Badge theme={theme} content={content} rounded={rounded} />
-            break;
         case "card":
             return <Card align={align} tetromino={tetromino} />
-            break;
         case "strong":
             return <Strong content={content} />
         case "progress":
