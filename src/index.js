@@ -1,4 +1,3 @@
-import React from 'react';
 import renderTetrisComponent from './utils/tetromino'
 
 const Tetris = (props) => {

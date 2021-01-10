@@ -6,7 +6,9 @@ import Image from '../components/image'
 import Alert from '../components/alert'
 import Badge from '../components/badge'
 import Card from '../components/card'
-const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino }) => {
+import Strong from '../components/strong'
+import Progress from '../components/progress'
+const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped }) => {
 
     switch (type) {
         case "button":
@@ -30,6 +32,10 @@ const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rou
         case "card":
             return <Card align={align} tetromino={tetromino} />
             break;
+        case "strong":
+            return <Strong content={content} />
+        case "progress":
+            return <Progress classname={classname} theme={theme} min={min} max={max} content={content} animated={animated} striped={striped} />
         default:
             return <Text size={size} content="No component of this type found" />
 
