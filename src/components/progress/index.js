@@ -2,12 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types';
 const Progress = ({ classname, theme, content, min, max, striped, animated }) =>
 (<div className={`progress ${classname}`}>
-    <div className={`progress-bar ${theme} ${striped ? 'progress-bar-striped' : ''} 
-        ${animated ? 'progress-bar-animated' : ''}`}
+    <div className={`progress-bar ${theme} ${striped ? 'progress-bar-striped' : ''} ${animated ? 'progress-bar-animated' : ''}`}
         role="progressbar"
         aria-valuenow={content}
         aria-valuemin={min}
-        style={{ width: `${content}%` }}
+        style={{width:`${content}%`}}
         aria-valuemax={max}>{`${content}%`}</div>
 </div>);
 
@@ -21,6 +20,7 @@ Progress.propTypes = {
     animated: PropTypes.bool
 };
 Progress.defaultProps = {
+    classname:'',
     content: '5',
     min: 0,
     max: 100,

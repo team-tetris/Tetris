@@ -5,7 +5,7 @@ export default { title: 'Progress component', decorators: [withKnobs] }
 export const progress = () => {
     const classname = text('class', '')
     const types = {
-        primary: undefined,
+        primary: '',
         success: 'bg-success',
         info: 'bg-info',
         warning: 'bg-warning',
