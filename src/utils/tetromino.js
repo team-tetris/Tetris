@@ -8,6 +8,8 @@ import Badge from '../components/badge'
 import Card from '../components/card'
 import Strong from '../components/strong'
 import Progress from '../components/progress'
+import Accordion from '../components/accordion'
+
 const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped }) => {
 
     switch (type) {
@@ -29,6 +31,8 @@ const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rou
             return <Strong content={content} />
         case "progress":
             return <Progress classname={classname} theme={theme} min={min} max={max} content={content} animated={animated} striped={striped} />
+        case "accordion":
+            return <Accordion content={content} />
         default:
             return <Text size={size} content="No component of this type found" />
 
