@@ -3,7 +3,7 @@ import Accordion from './index.js'
 import { withKnobs } from '@storybook/addon-knobs'
 export default { title: 'Accordion component', decorators: [withKnobs] }
 export const accordion = () => {
-    const content = [{
+    const tetromino = [{
         type: 'accordion-content',
         title: '1',
         content: 'text 1'
@@ -19,5 +19,5 @@ export const accordion = () => {
         content: 'text 3'
     }
     ]
-    return <Accordion content={content} />
+    return <Accordion tetromino={tetromino} />
 }

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Accordion = ({ content }) => {
+const Accordion = ({ tetromino }) => {
 
     const [currentIndex, toggleIndex] = useState(null)
     return <div className="bd-example bg-light">
         <div className="accordion accordion-flush" id="accordionFlushExample">
-            {content.map((obj, index) => {
+            {tetromino === undefined ? console.error('You need to pass some content to component through tetromino') : tetromino.map((obj, index) => {
                 return <div className="accordion-item">
                     <h2 className="accordion-header" id="flush-headingOne">
                         <button onClick={() => toggleIndex(index === currentIndex ? null : index)} className={`accordion-button ${currentIndex !== index ? 'collapsed' : ''}`} type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded={currentIndex === index ? true : false} aria-controls="flush-collapseOne">

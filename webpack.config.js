@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/index.js',
   externals: [nodeExternals()],
   output: {
-    filename: 'index.js',
+    filename: 'tetris.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'tetris',
     libraryTarget: 'umd'
