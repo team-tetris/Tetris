@@ -1,8 +1,8 @@
 import React from 'react'
 import Container from './index'
 import { withKnobs, select } from '@storybook/addon-knobs'
-export default { title: 'Container component', decorators: [withKnobs] }
-export const container = () => {
+export default { title: 'Vertical container component', decorators: [withKnobs] }
+export const verticalContainer = () => {
 
   const tetromino = [{
     type: 'card',
@@ -114,5 +114,5 @@ export const container = () => {
 
   const count = select("Count", { 12: 12, 2: 2, 3: 3, 4: 4, 6: 6 }, 3)
 
-  return <Container tetromino={tetromino} count={count} />
+  return <Container tetromino={tetromino} count={count} gutter={3} />
 }

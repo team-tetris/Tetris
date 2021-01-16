@@ -1,7 +1,7 @@
 import React from 'react'
 import renderContainerTetromino from './container.tetromino'
-const Container = ({ tetromino, count, gutter = 3 }) => {
-    return <div className={`row col-12 g-${gutter}`}>
+const Container = ({ tetromino, count, gutter = 0 }) => {
+    return <div className={` row col-12 ${gutter ? `g-${gutter}` : undefined}`}>
         {tetromino.map((component) => {
             return renderContainerTetromino(component, count)
         })}

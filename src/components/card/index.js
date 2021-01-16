@@ -20,6 +20,10 @@ Card.propTypes = {
             PropTypes.shape({
                 type: PropTypes.string.isRequired,
                 source: PropTypes.string.isRequired,
+            }),
+            PropTypes.shape({
+                type: PropTypes.string.isRequired,
+                tetromino: PropTypes.array
             })
         ])
     ),

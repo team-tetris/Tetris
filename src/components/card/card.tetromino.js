@@ -4,7 +4,8 @@ import Heading from '../heading'
 import Text from '../text'
 import Image from '../image'
 import Badge from '../badge'
-const renderCardTetromino = ({ type, content, theme, outline, size, muted, rounded, source, height, width }) => {
+import Container from '../container'
+const renderCardTetromino = ({ type, tetromino, gutter, count, content, theme, outline, size, muted, rounded, source, height, width }) => {
     switch (type) {
         case "button":
             return <Button theme={theme} size={size} content={content} outline={outline} key={Math.random()} />
@@ -18,6 +19,8 @@ const renderCardTetromino = ({ type, content, theme, outline, size, muted, round
             return <Badge theme={theme} content={content} rounded={rounded} key={Math.random()} />
         case "card-image":
             return <Image rounded={rounded} size={size} source={source} height={height} width={width} classname="card-img-top" key={Math.random()} />
+        case "container":
+            return <Container tetromino={tetromino} count={count} gutter={gutter} key={Math.random()} />
     }
 }
 export default renderCardTetromino;
