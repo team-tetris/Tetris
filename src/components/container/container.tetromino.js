@@ -10,8 +10,8 @@ import Badge from '../badge'
 const renderCardTetromino = ({ tetromino, gutter, type, content, theme, outline, size, muted, rounded, source, height, width }, count = 12) => {
     switch (type) {
         case "card":
-            return <div className={`col col-${count}`}>
-                <Card key={Math.random()} tetromino={tetromino} />
+            return <div className={`col col-${count}`} key={Math.random()} >
+                <Card tetromino={tetromino} />
             </div>
         case "container":
             return <div className={`col col-${count}`} key={Math.random()} >

@@ -1,8 +1,9 @@
 import React from 'react'
 import renderCardTetromino from './card.tetromino'
 import PropTypes from 'prop-types'
-const Card = ({ tetromino, align }) => (
-    <div className="card">
+import Shadow from '../shadow'
+const Card = ({ tetromino, align, shadow }) => (
+    <div className={`card ${Shadow(shadow)} "`}>
         {tetromino.map((obj) => obj.type === 'card-image' ? renderCardTetromino(obj) : null)}
         <div className={`card-body${align ? ` text-${align}` : ''}`}>
             {tetromino.map((obj) => obj.type !== 'card-image' ? renderCardTetromino(obj) : null)}

@@ -10,7 +10,8 @@ import Strong from '../components/strong'
 import Progress from '../components/progress'
 import Accordion from '../components/accordion'
 import Container from '../components/container'
-const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter }) => {
+import Tab from '../components/tab'
+const renderTetrisComponent = ({ pills, type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter }) => {
 
     switch (type) {
         case "button":
@@ -32,11 +33,13 @@ const renderTetrisComponent = ({ type, content, theme, outline, size, muted, rou
         case "progress":
             return <Progress classname={classname} theme={theme} min={min} max={max} content={content} animated={animated} striped={striped} />
         case "accordion":
-            return <Accordion content={content} />
+            return <Accordion tetromino={tetromino} />
         case "container":
             return <Container tetromino={tetromino} gutter={gutter} count={count} />
         case "button-group":
             return <ButtonGroup tetromino={tetromino} size={size} />
+        case "tab":
+            return <Tab tetromino={tetromino} pills={pills} />
         default:
             return <Text size={size} content="No component of this type found" />
 
