@@ -11,37 +11,40 @@ import Progress from '../components/progress'
 import Accordion from '../components/accordion'
 import Container from '../components/container'
 import Tab from '../components/tab'
-const renderTetrisComponent = ({ pills, type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter }) => {
-
+import ButtonGroup from '../components/button-group'
+const renderTetrisComponent = props => {
+    //reserved props
+    //pills, type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter
+    const { type } = props
     switch (type) {
         case "button":
-            return <Button theme={theme} size={size} content={content} outline={outline} />
+            return <Button {...props} />
         case "heading":
-            return <Heading muted={muted} size={size} content={content} />
+            return <Heading {...props} />
         case "text":
-            return <Text size={size} content={content} />
+            return <Text {...props} />
         case "image":
-            return <Image rounded={rounded} size={size} source={source} height={height} width={width} />
+            return <Image {...props} />
         case "alert":
-            return <Alert theme={theme} content={content} heading={heading} close={close} />
+            return <Alert {...props} />
         case "badge":
-            return <Badge theme={theme} content={content} rounded={rounded} />
+            return <Badge {...props} />
         case "card":
-            return <Card align={align} tetromino={tetromino} />
+            return <Card {...props} />
         case "strong":
-            return <Strong content={content} />
+            return <Strong {...props} />
         case "progress":
-            return <Progress classname={classname} theme={theme} min={min} max={max} content={content} animated={animated} striped={striped} />
+            return <Progress {...props} />
         case "accordion":
-            return <Accordion tetromino={tetromino} />
+            return <Accordion {...props} />
         case "container":
-            return <Container tetromino={tetromino} gutter={gutter} count={count} />
+            return <Container {...props} />
         case "button-group":
-            return <ButtonGroup tetromino={tetromino} size={size} />
+            return <ButtonGroup {...props} />
         case "tab":
-            return <Tab tetromino={tetromino} pills={pills} />
+            return <Tab {...props} />
         default:
-            return <Text size={size} content="No component of this type found" />
+            return <Text {...props} content="No component of this type found" />
 
     }
 }
