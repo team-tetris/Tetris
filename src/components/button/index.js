@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Shadow from '../shadow'
-const Button = ({ content = 'Sample button', theme = 'primary', outline = false, size, shadow }) => (
-   <button className={`${Shadow(shadow)} btn btn${outline ? `-outline` : ''}-${theme} ${size ? size === 'large' ? 'btn-lg' : size === 'small' ? 'btn-sm' : '' : ''}`}>{content}</button>
+const Button = ({ content = 'Sample button', theme = 'primary', outline = false, size, shadow ,classes}) => (
+   <button className={`${Shadow(shadow)} btn btn${outline ? `-outline` : ''}-${theme} ${size ? size === 'large' ? 'btn-lg' : size === 'small' ? 'btn-sm' : '' : ''} ${classes}`}>{content}</button>
 )
 
 Button.propTypes = {

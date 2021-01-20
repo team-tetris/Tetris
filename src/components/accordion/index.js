@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
-const Accordion = ({ tetromino }) => {
+const Accordion = ({ tetromino,classes}) => {
 
     const [currentIndex, toggleIndex] = useState(null)
-    return <div className="bd-example bg-light">
+    return <div className={`bg-light ${classes}`}>
         <div className="accordion accordion-flush" id="accordionFlushExample">
             {tetromino === undefined ? console.error('You need to pass some content to component through tetromino') : tetromino.map((obj, index) => {
                 return <div key={Math.random()} className="accordion-item">

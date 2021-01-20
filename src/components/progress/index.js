@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-const Progress = ({ classname, theme, content, min, max, striped, animated }) =>
-(<div className={`progress ${classname}`}>
+const Progress = ({ theme, content, min, max, striped, animated ,classes}) =>
+(<div className={`progress ${classes}`}>
     <div className={`progress-bar ${theme} ${striped ? 'progress-bar-striped' : ''} ${animated ? 'progress-bar-animated' : ''}`}
         role="progressbar"
         aria-valuenow={content}

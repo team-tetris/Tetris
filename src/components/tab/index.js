@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-const Tab = ({ tetromino, pills }) => {
+const Tab = ({ tetromino, pills ,classes}) => {
 
     const [currentIndex, toggleIndex] = useState(0)
 
     return <>
-        <nav>
+        <nav className={classes}>
             <div className={`nav ${pills ? 'nav-pills' : 'nav-tabs'}`} id="nav-tab" role="tablist">
                 {tetromino === undefined ? console.error('You need to pass some content into tetromino') :
                     tetromino.map((tabcontent, index) => (

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Image = ({ source, size, rounded = false, height, width, classname }) => {
+const Image = ({ source, size, rounded = false, height, width, classes }) => {
    return <img src={source} className={`icon icon-shape ${rounded === 'rounded-circle' ? 'rounded-circle' : rounded ? 'rounded' : ''
-      } ${size ? size : ''} ${classname ? classname : ''}`} style={{
+      } ${size ? size : ''} ${classes}`} style={{
       height: `${height && width ? height : undefined}`,
       width: `${height && width ? width : undefined}`
    }} />
