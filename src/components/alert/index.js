@@ -10,7 +10,7 @@ const Alert = ({ content = 'A simple primary alert—check it out!', theme = 'pr
          <hr />
       </>}
       {content}
-      {close && <button type="button" className="close" aria-label="Close" onClick={() => toggleShow(false)}><span aria-hidden="true">×</span></button>}
+      {close && <button type="button" className="btn-close" aria-label="Close" onClick={() => toggleShow(false)}></button>}
    </div>
 }
 
