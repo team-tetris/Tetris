@@ -1,0 +1,48 @@
+.icons-shape {
+  display: inline-flex;
+  padding: 12px;
+  text-align: center;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+}
+.icons-shape-danger {
+  color: #ff3709;
+  background-color: rgba(252, 140, 114, .5);
+}
+
+
+.jumbotron-icons .fa-2 {
+  font-size: 2em
+}
+
+.jumbotron-icons .fa-3 {
+  font-size: 4em;
+}
+
+.jumbotron-icons .fa-4 {
+  font-size: 7em
+}
+
+.jumbotron-icons .fa-5 {
+  font-size: 12em
+}
+
+.jumbotron-icons .fa-6 {
+  font-size: 20em
+}
+
+.icons-shape-success {
+  color: #1aae6f;
+  background-color: rgba(84, 218, 161, .5);
+}
+
+.icons-shape-primary {
+  color: #2643e9;
+  background-color: rgba(138, 152, 235, .5);
+}

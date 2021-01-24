@@ -1,0 +1,641 @@
+section{
+    display: block;
+}
+.section
+{
+    position: relative;
+
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.section-xl
+{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.section-lg
+{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.section-sm
+{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 768px)
+{
+    .section-hero
+    {
+        min-height: 500px;
+    }
+}
+
+.section-shaped
+{
+    position: relative;
+}
+.section-shaped .shape
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+}
+.section-shaped .shape span
+{
+    position: absolute;
+}
+.section-shaped .shape + .container
+{
+    position: relative;
+
+    height: 100%;
+}
+.section-shaped .shape.shape-skew + .container
+{
+    padding-top: 0;
+}
+.section-shaped .shape.shape-skew + .container .col
+{
+    margin-top: -100px;
+}
+.section-shaped .shape.shape-skew + .shape-container
+{
+    padding-top: 18rem;
+    padding-bottom: 19rem;
+}
+.section-shaped .shape-skew
+{
+    transform: skewY(-4deg);
+    transform-origin: 0;
+}
+.section-shaped .shape-skew span
+{
+    transform: skew(4deg);
+}
+.section-shaped .shape-primary
+{
+    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+}
+.section-shaped .shape-primary :nth-child(1)
+{
+    background: #53f;
+}
+.section-shaped .shape-primary :nth-child(2)
+{
+    background: #4553ff;
+}
+.section-shaped .shape-primary :nth-child(3)
+{
+    background: #4f40ff;
+}
+.section-shaped .shape-primary :nth-child(4)
+{
+    background: #25ddf5;
+}
+.section-shaped .shape-primary :nth-child(5)
+{
+    background: #1fa2ff;
+}
+.section-shaped .shape-default
+{
+    background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+}
+.section-shaped .shape-default :nth-child(1)
+{
+    background: #7795f8;
+}
+.section-shaped .shape-default :nth-child(2)
+{
+    background: #7b9aff;
+}
+.section-shaped .shape-default :nth-child(3)
+{
+    background: #6f8ff8;
+}
+.section-shaped .shape-default :nth-child(4)
+{
+    background: #76eea7;
+}
+.section-shaped .shape-default :nth-child(5)
+{
+    background: #6adaff;
+}
+.section-shaped .shape-light
+{
+    background: linear-gradient(150deg, shapes-light-color('step-1-gradient-bg') 15%, shapes-light-color('step-2-gradient-bg') 70%, shapes-light-color('step-3-gradient-bg') 94%);
+}
+.section-shaped .shape-light :nth-child(1)
+{
+    background: shapes-light-color('span-1-bg');
+}
+.section-shaped .shape-light :nth-child(2)
+{
+    background: shapes-light-color('span-2-bg');
+}
+.section-shaped .shape-light :nth-child(3)
+{
+    background: shapes-light-color('span-3-bg');
+}
+.section-shaped .shape-light :nth-child(4)
+{
+    background: shapes-light-color('span-4-bg');
+}
+.section-shaped .shape-light :nth-child(5)
+{
+    background: shapes-light-color('span-5-bg');
+}
+.section-shaped .shape-dark
+{
+    background: linear-gradient(150deg, #32325d 15%, #32325d 70%, #32325d 94%);
+}
+.section-shaped .shape-dark :nth-child(1)
+{
+    background: #2e2e57;
+}
+.section-shaped .shape-dark :nth-child(2)
+{
+    background: #2b2b58;
+}
+.section-shaped .shape-dark :nth-child(3)
+{
+    background: #25254d;
+}
+.section-shaped .shape-dark :nth-child(4)
+{
+    background: #d782d9;
+}
+.section-shaped .shape-dark :nth-child(5)
+{
+    background: #008169;
+}
+.section-shaped .circle span
+{
+    width: 120px;
+
+    height: 120px;
+border-radius: 50%;
+}
+
+.section-shaped .circle .span-200
+{
+    width: 200px;
+    height: 200px;
+}
+.section-shaped .circle .span-150
+{
+    width: 150px;
+    height: 150px;
+}
+.section-shaped .circle .span-100
+{
+    width: 100px;
+    height: 100px;
+}
+.section-shaped .circle .span-75
+{
+    width: 75px;
+    height: 75px;
+}
+.section-shaped .circle .span-50
+{
+    width: 50px;
+    height: 50px;
+}
+.section-shaped .square span
+{
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+}
+
+.section-shaped .square .span-200
+{
+    width: 200px;
+    height: 200px;
+}
+.section-shaped .square .span-150
+{
+    width: 150px;
+    height: 150px;
+}
+.section-shaped .square .span-100
+{
+    width: 100px;
+    height: 100px;
+}
+.section-shaped .square .span-75
+{
+    width: 75px;
+    height: 75px;
+}
+.section-shaped .square .span-50
+{
+    width: 50px;
+    height: 50px;
+}
+.section-shaped .square :nth-child(1)
+{
+    bottom: auto;
+    left: 4%;
+    top :3%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .square :nth-child(2)
+{
+    top: 10%;
+    right: 4%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .square :nth-child(3)
+{
+    top: 280px;
+    right: 5.66666%;
+
+    background: rgba(255, 255, 255, .3);
+}
+.section-shaped .square :nth-child(4)
+{
+    top: 320px;
+    right: 7%;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .square :nth-child(5)
+{
+    top: 38%;
+    right: auto;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
+.section-shaped .square :nth-child(6)
+{
+    top: 44%;
+    right: auto;
+    left: 10%;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .square :nth-child(7)
+{
+    right: 36%;
+    bottom: 50%;
+
+    background: rgba(255, 255, 255, .04);
+}
+.section-shaped .square :nth-child(8)
+{
+    right: 2%;
+    bottom: 70px;
+
+    background: rgba(255, 255, 255, .2);
+}
+.section-shaped .square :nth-child(9)
+{
+    right: 2%;
+    bottom: 1%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .square :nth-child(10)
+{
+    right: auto;
+    bottom: 1%;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
+
+.section-shaped .square span
+{
+    width: 120px;
+    height: 120px;
+
+    border-radius: 10%;
+}
+
+.section-shaped .square .span-200
+{
+    width: 200px;
+    height: 200px;
+}
+.section-shaped .square .span-150
+{
+    width: 150px;
+    height: 150px;
+}
+.section-shaped .square .span-100
+{
+    width: 100px;
+    height: 100px;
+}
+.section-shaped .square .span-75
+{
+    width: 75px;
+    height: 75px;
+}
+.section-shaped .square .span-50
+{
+    width: 50px;
+    height: 50px;
+}
+.section-shaped .circle :nth-child(1)
+{
+    bottom: auto;
+    left: -4%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .circle :nth-child(2)
+{
+    top: 10%;
+    right: 4%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .circle :nth-child(3)
+{
+    top: 280px;
+    right: 5.66666%;
+
+    background: rgba(255, 255, 255, .3);
+}
+.section-shaped .circle :nth-child(4)
+{
+    top: 320px;
+    right: 7%;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .circle :nth-child(5)
+{
+    top: 38%;
+    right: auto;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
+.section-shaped .circle :nth-child(6)
+{
+    top: 44%;
+    right: auto;
+    left: 10%;
+
+    width: 200px;
+    height: 200px;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .circle :nth-child(7)
+{
+    right: 36%;
+    bottom: 50%;
+
+    background: rgba(255, 255, 255, .04);
+}
+.section-shaped .circle :nth-child(8)
+{
+    right: 2%;
+    bottom: 70px;
+
+    background: rgba(255, 255, 255, .2);
+}
+.section-shaped .circle :nth-child(9)
+{
+    right: 2%;
+    bottom: 1%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .circle :nth-child(10)
+{
+    right: auto;
+    bottom: 1%;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
+@media (max-width: 991.98px)
+{
+    .section-shaped .circle span
+    {
+        height: 120px;
+    }
+}
+@media (max-width: 767.98px)
+{
+    .section-shaped .circle span
+    {
+        height: 90px;
+    }
+}
+.section-shaped .circle.shape-primary
+{
+    background: linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);
+}
+.section-shaped .circle.shape-default
+{
+    background: linear-gradient(150deg, #7795f8 15%, #6772e5 70%, #555abf 94%);
+}
+.section-shaped .circle.shape-light
+{
+    background: linear-gradient(150deg, shapes-light-color('step-1-gradient-bg') 15%, shapes-light-color('step-2-gradient-bg') 70%, shapes-light-color('step-3-gradient-bg') 94%);
+}
+.section-shaped .circle.shape-dark
+{
+    background: linear-gradient(150deg, #32325d 15%, #32325d 70%, #32325d 94%);
+}
+.section-shaped .shape-style-2 span
+{
+    height: 190px;
+}
+
+.separator
+{
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    right: 0;
+    left: 0;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 150px;
+
+    transform: translateZ(0);
+    pointer-events: none;
+}
+.separator svg
+{
+    position: absolute;
+
+    pointer-events: none;
+}
+
+.separator-top
+{
+    top: 0;
+    bottom: auto;
+}
+.separator-top svg
+{
+    top: 0;
+}
+
+.separator-bottom
+{
+    top: auto;
+    bottom: 0;
+}
+.separator-bottom svg
+{
+    bottom: 0;
+}
+
+.separator-inverse
+{
+    transform: rotate(180deg);
+}
+
+.separator-skew
+{
+    height: 60px;
+}
+
+@media (max-width: 992px)
+{
+    .separator-skew
+    {
+        z-index: 0;
+    }
+}
+.fill-white {
+    fill: #fff;
+}
+
+
+.section-shaped .triangle span
+{
+    width: 0px;
+    height : 0px;
+    background:transparent !important;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid rgba(255, 255, 255, .1);
+}
+
+.section-shaped .triangle .span-200
+{
+    width: 200px;
+    height: 200px;
+}
+.section-shaped .triangle .span-150
+{
+    width: 0px;
+    height: 0px;
+}
+.section-shaped .triangle .span-100
+{
+    width: 100px;
+    height: 100px;
+}
+.section-shaped .triangle .span-75
+{
+    width: 75px;
+    height: 75px;
+}
+.section-shaped .triangle .span-50
+{
+    width: 50px;
+    height: 50px;
+}
+
+.section-shaped .triangle :nth-child(1)
+{
+    bottom: auto;
+    left: 10%;
+    top:10%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .triangle :nth-child(2)
+{
+    top: 10%;
+    right: 4%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .triangle :nth-child(3)
+{
+    top: 280px;
+    right: 5.66666%;
+
+    background: rgba(255, 255, 255, .3);
+}
+.section-shaped .triangle :nth-child(4)
+{
+    top: 320px;
+    right: 7%;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .triangle :nth-child(5)
+{
+    top: 38%;
+    right: auto;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
+.section-shaped .triangle :nth-child(6)
+{
+    top: 64%;
+    right: auto;
+    left: 10%;
+
+    background: rgba(255, 255, 255, .15);
+}
+.section-shaped .triangle :nth-child(7)
+{
+    right: 36%;
+    bottom: 50%;
+
+    background: rgba(255, 255, 255, .04);
+}
+.section-shaped .triangle :nth-child(8)
+{
+    right: 2%;
+    bottom: 70px;
+
+    background: rgba(255, 255, 255, .2);
+}
+.section-shaped .triangle :nth-child(9)
+{
+    right: 2%;
+    bottom: 1%;
+
+    background: rgba(255, 255, 255, .1);
+}
+.section-shaped .triangle :nth-child(10)
+{
+    right: auto;
+    bottom: 1%;
+    left: 1%;
+
+    background: rgba(255, 255, 255, .05);
+}
