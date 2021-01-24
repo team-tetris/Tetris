@@ -3,13 +3,18 @@ import Section from './index'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 export default { title: 'Section component', decorators: [withKnobs] }
 export const section = () => {
-
-    return <Section tetromino={[
+const shape = select('shape', {circle : 'circle',square : 'square' , triangle : 'triangle'})
+const background = select('background', {default : 'default', dark : 'dark', primary : 'primary'},'primary')
+    return <Section
+    shape={shape}
+    background={background}
+     tetromino={[
         {
             type : 'container',
             count : 12,
             tetromino : [{
                 type: 'card',
+                classes: 'transform', 
                 tetromino: [{
                   type: 'card-image',
                   source: 'https://dummyimage.com/600x400/000/fff',
@@ -31,6 +36,7 @@ export const section = () => {
               },
               {
                 type: 'card',
+                classes: 'transform', 
                 tetromino: [{
                   type: 'card-image',
                   source: 'https://dummyimage.com/600x400/000/fff',

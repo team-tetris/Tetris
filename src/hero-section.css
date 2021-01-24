@@ -639,3 +639,7 @@ border-radius: 50%;
 
     background: rgba(255, 255, 255, .05);
 }
+.transform:hover{
+    transition: all .15s ease;
+    transform: translateY(-20px);
+}

@@ -9,11 +9,11 @@ import Badge from '../badge'
 import Accordion from '../accordion'
 import ButtonGroup from '../button-group'
 
-const renderCardTetromino = ({ tetromino, gutter, type, content, theme, outline, size, muted, rounded, source, height, width, count, shadow }) => {
+const renderSectonTetromino = ({ tetromino, gutter, type, content, theme, outline, size, muted, rounded, source, height, width, count, shadow ,classes}) => {
     switch (type) {
         case "card":
             return <div className={`col col-${count}`} key={Math.random()} >
-                <Card tetromino={tetromino} shadow={shadow} />
+                <Card tetromino={tetromino} shadow={shadow} classes={classes}/>
             </div>
         case "container":
             return <div className={`col col-${count}`} key={Math.random()} >
@@ -37,4 +37,4 @@ const renderCardTetromino = ({ tetromino, gutter, type, content, theme, outline,
             return <ButtonGroup tetromino={tetromino} size={size} />
     }
 }
-export default renderCardTetromino;
+export default renderSectonTetromino;

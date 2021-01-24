@@ -8,11 +8,11 @@ import Image from '../image'
 import Badge from '../badge'
 import ButtonGroup from '../button-group'
 
-const renderCardTetromino = ({ tetromino, shadow, gutter, type, content, theme, outline, size, muted, rounded, source, height, width }, count = 12) => {
+const renderCardTetromino = ({ tetromino, shadow, gutter, type, content, theme, outline, size, muted, rounded, source, height, width,classes }, count = 12) => {
     switch (type) {
         case "card":
             return <div className={`col col-${count}`} key={Math.random()} >
-                <Card tetromino={tetromino} shadow={shadow} />
+                <Card tetromino={tetromino} shadow={shadow} classes={classes}/>
             </div>
         case "container":
             return <div className={`col col-${count}`} key={Math.random()} >

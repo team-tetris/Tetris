@@ -1,12 +1,12 @@
 import React from 'react'
 import '../../hero-section.css'
 import renderSectionTetromino from './section.tetromino'
-const Section = ({tetromino}) =>
+const Section = ({tetromino,shape='circle',background='primary'}) =>
 {
     return <div className="position-relative">
       <section className="section section-lg section-hero section-shaped">
         
-    <div className="shape square shape-primary">
+    <div className={`shape ${shape} shape-${background}`}>
       <span className="span-150"></span>
       <span className="span-50"></span>
       <span className="span-50"></span>
@@ -20,7 +20,7 @@ const Section = ({tetromino}) =>
     </div>
     <div className="container shape-container d-flex align-items-center py-lg">
       <div className="col px-0">
-      {tetromino.map( (component) =>{
+      {tetromino.map( (component) =>{console.log(component)
          return renderSectionTetromino(component)})}
       </div>
     </div>
