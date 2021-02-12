@@ -12,7 +12,8 @@ import Accordion from '../components/accordion'
 import Container from '../components/container'
 import Tab from '../components/tab'
 import ButtonGroup from '../components/button-group'
-const renderTetrisComponent = props => {
+import Section from '../components/section'
+const renderTetrisComponent = (props,index) => {
     //reserved props
     //pills, type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter
     const { type } = props
@@ -43,6 +44,10 @@ const renderTetrisComponent = props => {
             return <ButtonGroup {...props} />
         case "tab":
             return <Tab {...props} />
+        case "section":
+            return <Section {...props} index={index}/>
+            // case "icon": 
+            // return <Icon {...props}/>
         default:
             return <Text {...props} content="No component of this type found" />
 

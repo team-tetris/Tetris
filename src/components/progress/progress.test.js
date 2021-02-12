@@ -8,7 +8,7 @@ describe('Progress', () => {
             <Progress content="25" theme="bg-success" />
         )
         expect(wrapper.text()).toBe('25%');
-        expect(wrapper.html()).toBe(`<div class="progress "><div class="progress-bar bg-success  " role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
+        expect(wrapper.html()).toBe(`<div className="progress "><div className="progress-bar bg-success  " role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
     })
 })
 themes.forEach((theme) => {
@@ -18,7 +18,7 @@ themes.forEach((theme) => {
                 <Progress content="25" theme={theme} />
             )
             expect(wrapper.text()).toBe('25%');
-            expect(wrapper.html()).toBe(`<div class="progress "><div class="progress-bar ${theme}  " role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
+            expect(wrapper.html()).toBe(`<div className="progress "><div className="progress-bar ${theme}  " role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
         })
     })
 })
@@ -28,6 +28,6 @@ describe('Progress with animation', () => {
             <Progress content="25" theme="bg-success" striped animated />
         )
         expect(wrapper.text()).toBe('25%');
-        expect(wrapper.html()).toBe(`<div class="progress "><div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
+        expect(wrapper.html()).toBe(`<div className="progress "><div className="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" style="width:25%" aria-valuemax="100">25%</div></div>`);
     })
 })

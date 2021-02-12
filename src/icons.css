@@ -8,8 +8,8 @@
 }
 
 .icons {
-  width: 3rem;
-  height: 3rem;
+  width: 3rem !important;
+  height: 3rem !important;
 }
 .icons-shape-danger {
   color: #ff3709;

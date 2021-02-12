@@ -7,31 +7,41 @@ import Text from '../text'
 import Image from '../image'
 import Badge from '../badge'
 import ButtonGroup from '../button-group'
+import Section from '../section'
+import Icon from '../icon'
+import Accordion from '../accordion'
 
-const renderCardTetromino = ({ tetromino, shadow, gutter, type, content, theme, outline, size, muted, rounded, source, height, width,classes }, count = 12) => {
+const renderContainerTetromino = (props, count = 12, index) => {
+    const { tetromino, type } = props
     switch (type) {
         case "card":
             return <div className={`col col-${count}`} key={Math.random()} >
-                <Card tetromino={tetromino} shadow={shadow} classes={classes}/>
+                <Card {...props} />
             </div>
+        case "accordion":
+            return <Accordion {...props} />
         case "container":
             return <div className={`col col-${count}`} key={Math.random()} >
-                <Container tetromino={tetromino} count={count} gutter={gutter} />
+                <Container {...props} />
             </div>
         case "button":
-            return <Button theme={theme} size={size} content={content} outline={outline} key={Math.random()} />
+            return <div className='btn-wrapper'><Button {...props} key={Math.random()} /></div>
         case "button-group":
-            return <ButtonGroup tetromino={tetromino} size={size} />
+            return <ButtonGroup {...props} />
         case "heading":
-            return <Heading muted={muted} size={size} content={content} key={Math.random()} />
+            return <Heading {...props} key={Math.random()} />
         case "text":
-            return <Text size={size} content={content} key={Math.random()} />
+            return <Text {...props} key={Math.random()} />
         case "image":
-            return <Image rounded={rounded} size={size} source={source} height={height} width={width} key={Math.random()} />
+            return <Image {...props} key={Math.random()} />
         case "badge":
-            return <Badge theme={theme} content={content} rounded={rounded} key={Math.random()} />
+            return <Badge {...props} key={Math.random()} />
         case "card-image":
-            return <Image rounded={rounded} size={size} source={source} height={height} width={width} classname="card-img-top" key={Math.random()} />
+            return <Image {...props} classname="card-img-top" key={Math.random()} />
+        case "section":
+            return <Section {...props} index={index} />
+        case "icon":
+            return <Icon {...props} />
     }
 }
-export default renderCardTetromino;
+export default renderContainerTetromino;

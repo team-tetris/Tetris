@@ -12,7 +12,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "build:prod": "npm run webpack -- --mode production",
-    "build:dev": "npm run webpack -- --mode development"
+    "build:dev": "npm run webpack -- --mode development",
+    "build:storybook": "build-storybook -o deployable-storybook",
+    "chromatic": "npx chromatic --project-token 12b1adbfea22"
   },
   "keywords": [
     "tetris"
@@ -34,7 +36,6 @@
   "author": "HARISH KUMAR S S",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -47,6 +48,7 @@
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "chromatic": "^5.6.2",
     "clean-webpack-plugin": "^3.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",

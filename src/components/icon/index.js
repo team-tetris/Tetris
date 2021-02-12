@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import "@fortawesome/fontawesome-free/css/all.css";
+
 import '../../icons.css'
 const Icon = ({ content, size, source, shape, center }) => {
    return content ?
