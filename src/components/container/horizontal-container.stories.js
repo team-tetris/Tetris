@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './index'
+import Tetris from '../../index'
 import { withKnobs, select } from '@storybook/addon-knobs'
 export default { title: 'Horizontal container', decorators: [withKnobs] }
 export const horizontalContainer = () => {
@@ -42,5 +42,5 @@ export const horizontalContainer = () => {
 
     const count = select("Count", { 12: 12, 2: 2, 3: 3, 4: 4, 6: 6 }, 6)
 
-    return <Container tetromino={tetromino} count={count} gutter={3} />
+    return <Tetris tetromino={{ type: "container", tetromino: tetromino, count: count }} />
 }

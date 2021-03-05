@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from './index.js'
+import Tetris from '../../index'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
 export default { title: 'Image component', decorators: [withKnobs] }
 export const image = () => {
@@ -14,5 +15,5 @@ export const image = () => {
   const width = text('width', '')
 
   const size = select('size', sizeVariants,)
-  return <Image rounded={rounded} size={size} source={source} height={height} width={width} />
+  return <Tetris tetromino={{ type: "image", rounded: rounded, size: size, source: source, height: height, width: width }} />
 }

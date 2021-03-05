@@ -1,12 +1,12 @@
 import React from 'react'
-import Card from './index.js'
+import Tetris from '../../index'
 import { withKnobs, select } from '@storybook/addon-knobs'
 export default { title: 'Card component', decorators: [withKnobs] }
 export const card = () => {
 
   const tetromino = [
     {
-      type: 'card-image',
+      type: 'cardImage',
       source: 'https://dummyimage.com/600x400/000/fff',
     },
     {
@@ -40,5 +40,5 @@ export const card = () => {
 
   const align = select('align', aligntypes)
 
-  return <Card tetromino={tetromino} align={align} />
+  return <Tetris tetromino={{ type: "card", tetromino: tetromino, align: align }} />
 }

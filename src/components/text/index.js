@@ -7,5 +7,6 @@ const Text = ({ content = 'Sample text', size,classes }) => {
 Text.propTypes = {
    content: PropTypes.string,
    size: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+   classes: PropTypes.string,
 }
 export default Text

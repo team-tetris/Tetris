@@ -1,5 +1,5 @@
 import React from 'react'
-import Badge from './index.js'
+import Tetris from '../../index'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 export default { title: 'Badge component', decorators: [withKnobs] }
 export const badge = () => {
@@ -18,5 +18,5 @@ export const badge = () => {
   }
   const theme = select('theme', types, 'primary')
   const rounded = boolean('rounded', false)
-  return <Badge theme={theme} content={content} rounded={rounded} />
+  return <Tetris tetromino={{ type: "badge", theme: theme, content: content, rounded: rounded }} />
 }

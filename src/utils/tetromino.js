@@ -16,38 +16,41 @@ import Section from '../components/section'
 const renderTetrisComponent = (props,index) => {
     //reserved props
     //pills, type, content, theme, outline, size, muted, rounded, source, height, width, heading, close, align, tetromino, min, max, classname, animated, striped, count, gutter
-    const { type } = props
+    const { type } = props.tetromino?.type === undefined ? props : props.tetromino
     switch (type) {
         case "button":
-            return <Button {...props} />
+            return <Button {...props.tetromino} />
         case "heading":
-            return <Heading {...props} />
+            return <Heading {...props.tetromino} />
         case "text":
-            return <Text {...props} />
+            return <Text {...props.tetromino} />
         case "image":
-            return <Image {...props} />
+            return <Image {...props.tetromino} />
         case "alert":
-            return <Alert {...props} />
+            return <Alert {...props.tetromino} />
         case "badge":
-            return <Badge {...props} />
+            return <Badge {...props.tetromino} />
+        case "cardImage":
+            return <Image {...props} classes="card-img-top" key={Math.random()} />
         case "card":
-            return <Card {...props} />
+            return <Card {...props.tetromino} />
         case "strong":
-            return <Strong {...props} />
+            return <Strong {...props.tetromino} />
         case "progress":
-            return <Progress {...props} />
+            return <Progress {...props.tetromino} />
         case "accordion":
-            return <Accordion {...props} />
+            return <Accordion {...props.tetromino} />
         case "container":
-            return <Container {...props} />
+            return <Container {...Array.isArray(props.tetromino) ? props : props.tetromino} />
         case "button-group":
-            return <ButtonGroup {...props} />
+            return <ButtonGroup {...props.tetromino} />
         case "tab":
-            return <Tab {...props} />
+            return <Tab {...props.tetromino} />
         case "section":
             return <Section {...props} index={index}/>
             // case "icon": 
             // return <Icon {...props}/>
+
         default:
             return <Text {...props} content="No component of this type found" />
 

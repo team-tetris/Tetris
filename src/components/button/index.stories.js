@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './index.js'
+import Tetris from '../../index'
 import { withKnobs, text,boolean, select } from '@storybook/addon-knobs'
 export default { title: 'Button component', decorators: [withKnobs] }
 export const button = () => {
@@ -24,5 +25,5 @@ export const button = () => {
   }
   const size = select('size',sizeVariants)
   const outline = boolean('outline',false)
-  return <Button theme={theme} size={size} message={message} outline={outline}/>
+  return <Tetris tetromino={{ type: "button", theme: theme, size: size, content: message, outline: outline }} />
 }

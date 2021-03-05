@@ -1,5 +1,6 @@
 import React from 'react'
-import Accordion from './index.js'
+// import Accordion from './index.js'
+import Tetris from '../../index'
 import { withKnobs } from '@storybook/addon-knobs'
 export default { title: 'Accordion component', decorators: [withKnobs] }
 export const accordion = () => {
@@ -19,5 +20,7 @@ export const accordion = () => {
         content: 'text 3'
     }
     ]
-    return <Accordion tetromino={tetromino} />
+    return <Tetris tetromino={{
+        type: "accordion", tetromino
+    }} />
 }

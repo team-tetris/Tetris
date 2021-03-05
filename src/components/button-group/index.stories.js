@@ -1,5 +1,5 @@
 import React from 'react'
-import ButtonGroup from './index'
+import Tetris from '../../index'
 import { withKnobs, select } from '@storybook/addon-knobs'
 export default { title: 'Button Group component', decorators: [withKnobs] }
 export const buttonGroup = () => {
@@ -25,5 +25,5 @@ export const buttonGroup = () => {
     },
   ]
   const size = select('Size', { large: "large", small: "small", normal: "normal" }, "normal")
-  return <ButtonGroup tetromino={tetromino} size={size} />
+  return <Tetris tetromino={{ type: "button-group", size: size, tetromino: tetromino }} />
 }

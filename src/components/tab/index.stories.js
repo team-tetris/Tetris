@@ -1,5 +1,5 @@
 import React from 'react'
-import Tab from './index.js'
+import Tetris from '../../index'
 import { withKnobs, boolean } from '@storybook/addon-knobs'
 export default { title: 'Tab component', decorators: [withKnobs] }
 export const tab = () => {
@@ -20,5 +20,5 @@ export const tab = () => {
     }
     ]
     const pills = boolean('pill style', false)
-    return <Tab tetromino={tetromino} pills={pills} />
+    return <Tetris tetromino={{ type: "tab", tetromino: tetromino, pills: pills }} />
 }

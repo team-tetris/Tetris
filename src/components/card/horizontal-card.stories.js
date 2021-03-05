@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './index'
+import Tetris from '../../index'
 import { withKnobs } from '@storybook/addon-knobs'
 export default { title: 'horizontal card ', decorators: [withKnobs] }
 export const horizontalCard = () => {
@@ -46,5 +46,5 @@ export const horizontalCard = () => {
 
     ]
 
-    return <Card tetromino={tetromino} />
+    return <Tetris tetromino={{ type: "card", tetromino: tetromino }} />
 }

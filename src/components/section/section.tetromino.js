@@ -30,7 +30,7 @@ const renderSectionTetromino = (props) => {
             return <Image {...props} key={Math.random()} />
         case "badge":
             return <Badge {...props} />
-        case "card-image":
+        case "cardImage":
             return <Image {...props} classname="card-img-top" key={Math.random()} />
         case "accordion":
             return <Accordion {...props} />

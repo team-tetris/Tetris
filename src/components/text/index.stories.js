@@ -1,5 +1,5 @@
 import React from 'react'
-import Text from './index.js'
+import Tetris from '../../index'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
 export default { title: 'Text component', decorators: [withKnobs] }
 export const Texts = () => {
@@ -13,5 +13,5 @@ export const Texts = () => {
     6: 6
   }
   const size = select('size', sizeVariants, undefined)
-  return <Text size={size} content={content} />
+  return <Tetris tetromino={{ type: "text", size: size, content: content }} />
 }

@@ -16,7 +16,7 @@ const background = select('background', {default : 'default', dark : 'dark', pri
                 type: 'card',
                 classes: 'transform', 
                 tetromino: [{
-                  type: 'card-image',
+                  type: 'cardImage',
                   source: 'https://dummyimage.com/600x400/000/fff',
                 },
                 {
@@ -38,7 +38,7 @@ const background = select('background', {default : 'default', dark : 'dark', pri
                 type: 'card',
                 classes: 'transform', 
                 tetromino: [{
-                  type: 'card-image',
+                  type: 'cardImage',
                   source: 'https://dummyimage.com/600x400/000/fff',
                 },
                 {

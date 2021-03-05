@@ -36,7 +36,7 @@ const renderContainerTetromino = (props, count = 12, index) => {
             return <Image {...props} key={Math.random()} />
         case "badge":
             return <Badge {...props} key={Math.random()} />
-        case "card-image":
+        case "cardImage":
             return <Image {...props} classname="card-img-top" key={Math.random()} />
         case "section":
             return <Section {...props} index={index} />

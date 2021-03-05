@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Shadow = (size) => {
     switch (size) {
         case 'regular':

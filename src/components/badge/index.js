@@ -10,5 +10,7 @@ Badge.propTypes = {
    content: PropTypes.string,
    theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
    rounded: PropTypes.bool,
+   shadow: PropTypes.string,
+   classes: PropTypes.string,
 }
 export default Badge

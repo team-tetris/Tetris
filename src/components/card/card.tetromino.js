@@ -18,7 +18,7 @@ const renderCardTetromino = ({ type, tetromino, gutter, count, content, theme, o
             return <Image rounded={rounded} size={size} source={source} height={height} width={width} key={Math.random()} />
         case "badge":
             return <Badge theme={theme} content={content} rounded={rounded} key={Math.random()} />
-        case "card-image":
+        case "cardImage":
             return <Image rounded={rounded} size={size} source={source} height={height} width={width} classes="card-img-top" key={Math.random()} />
         case "container":
             return <Container tetromino={tetromino} count={count} gutter={gutter} key={Math.random()} />

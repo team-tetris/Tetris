@@ -1,5 +1,5 @@
 import React from 'react'
-import Alert from './index.js'
+import Tetris from '../../index'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 export default { title: 'Alert component', decorators: [withKnobs] }
 export const alert = () => {
@@ -18,5 +18,5 @@ export const alert = () => {
   const heading = text('heading')
   const theme = select('theme', types, 'primary')
   const close = boolean('show close button');
-  return <Alert theme={theme} content={content} heading={heading} close={close} />
+  return <Tetris tetromino={{ type: "alert", theme: theme, content: content, heading: heading, close: close }} />
 }

@@ -10,5 +10,7 @@ Button.propTypes = {
    theme: PropTypes.oneOf(['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark', 'link']),
    outline: PropTypes.bool,
    size: PropTypes.string,
+   shadow: PropTypes.string,
+   classes: PropTypes.string,
 }
 export default Button
