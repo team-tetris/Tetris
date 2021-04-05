@@ -3,10 +3,9 @@ import React, { Component } from 'react'
 class Tab extends Component {
     constructor(props) {
         super(props);
+        this.state = { currentIndex: 0 }
     }
-    state = { currentIndex: 0 }
     toggleIndex = (index) => {
-        const { currentIndex } = this.state
         this.setState({ currentIndex: index })
     }
     render() {
